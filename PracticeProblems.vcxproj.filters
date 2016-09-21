@@ -18,15 +18,18 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\miscproblems.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\linkedlist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\reversewords.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\twosum.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\linkedlist.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\miscproblems.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

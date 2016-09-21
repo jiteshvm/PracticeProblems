@@ -110,12 +110,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\linkedlist.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\miscproblems.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\linkedlist.h" />
-    <ClInclude Include="src\reversewords.h" />
-    <ClInclude Include="src\twosum.h" />
+    <ClInclude Include="src\miscproblems.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

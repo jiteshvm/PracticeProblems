@@ -1,8 +1,5 @@
-#pragma once
-#include <vector>
+#include "miscproblems.h"
 #include <unordered_map>
-
-using namespace std;
 
 vector<int> twosum(vector<int>& nums, int target) {
 
@@ -23,4 +20,7 @@ vector<int> twosum(vector<int>& nums, int target) {
 		mp.insert(std::pair<int, int>(nums[i], i));
 	}
 	return result;
+}
+
+void reverseWords(char *s) {
 }
