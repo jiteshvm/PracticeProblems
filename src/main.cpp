@@ -6,8 +6,8 @@
 int main(int argc, const char* argv[]) {
 
 	// two sum
-	vector<int> v = { 1, 4, 3, 5};
-	int t = 7;
+	vector<int> v = { 1, 1, 3, 5};
+	int t = 2;
 	vector<int> res = twosum(v,t);
 	for (unsigned i = 0; i < res.size(); ++i) {
 		printf("%d, ", res[i]);
