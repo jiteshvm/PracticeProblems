@@ -1,13 +1,26 @@
 #pragma once
+#include <stdio.h>
 
 struct ListNode
 {
 	int data;
-	ListNode *next;
+	ListNode* next;
 };
 
-void insert_after(ListNode *node, ListNode* newnode);
+class LinkedList
+{
 
-ListNode* search_list(ListNode *head, int key);
+private:
+	ListNode* head;
+	int length;
 
-void erase_after(ListNode *node);
+public:
+	LinkedList();
+	void AddFirst(int val);
+	void AddLast(int val);
+	void Add(int index, int val);
+	ListNode* Find(int key);
+	void Remove(ListNode* node);
+	void PrintList();
+	void ReverseList();
+};

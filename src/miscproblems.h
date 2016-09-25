@@ -3,6 +3,6 @@
 
 using namespace std;
 
-vector<int> twosum(vector<int>& nums, int target);
+vector<int> TwoSum(vector<int>& nums, int target);
 
-void reverseWords(char *s);
+void ReverseWords(char *s);

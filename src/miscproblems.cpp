@@ -1,7 +1,7 @@
 #include "miscproblems.h"
 #include <unordered_map>
 
-vector<int> twosum(vector<int>& nums, int target) {
+vector<int> TwoSum(vector<int>& nums, int target) {
 
 	vector<int> result(2);
 	unordered_map<int, int> mp;
@@ -19,5 +19,5 @@ vector<int> twosum(vector<int>& nums, int target) {
 	return result;
 }
 
-void reverseWords(char *s) {
+void ReverseWords(char *s) {
 }
