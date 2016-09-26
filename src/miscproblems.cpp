@@ -19,5 +19,15 @@ vector<int> TwoSum(vector<int>& nums, int target) {
 	return result;
 }
 
+void reverse(char* s, int begin, int end) {
+	while (begin < end) {
+		char t = s[begin];
+		s[begin] = s[end];
+		s[end] = t;
+		begin++, end--;
+	}
+}
+
 void ReverseWords(char *s) {
+	reverse(s, 0, strlen(s) - 1);
 }

@@ -13,20 +13,25 @@ int main(int argc, const char* argv[]) {
 	//	printf("%d, ", res[i]);
 	//}
 	
-	//reversewords
-	//char *str = "one two three\0";
+	//reverse words in a string
+	char str[] = "one two three\0";
+	printf("%s", str);
+	ReverseWords(str);
+	printf("\n%s", str);
 	//reverseWords(str);
+	
+	//linked list operations
 	LinkedList* list = new LinkedList();
 	//list->AddFirst(5);
 	//list->AddFirst(4);
 	//list->AddFirst(3);
-	list->AddFirst(2);
-	list->AddFirst(1);
-	list->PrintList();
+	//list->AddFirst(2);
+	//list->AddFirst(1);
+	//list->PrintList();
 	//ListNode* c = list->Find(2);
 	//list->Remove(c);
-	list->ReverseList();
-	list->PrintList();
+	//list->ReverseList();
+	//list->PrintList();
 	getchar();
 	return 0;
 }
