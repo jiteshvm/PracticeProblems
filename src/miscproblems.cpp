@@ -31,3 +31,35 @@ void reverse(char* s, int begin, int end) {
 void ReverseWords(char *s) {
 	reverse(s, 0, strlen(s) - 1);
 }
+
+int trap(vector<int>& height) {
+	int i = 0;
+	int j = (int)height.size() - 1;
+	int iMax = 0, jMax = 0, amount = 0;
+	while(i <= j) {
+		if (height[i] <= height[j]) {
+			if (height[i] >= iMax)
+				iMax = height[i];
+			else
+				amount += iMax - height[i];
+			++i;
+		}
+		else {
+			if (height[j] >= jMax)
+				jMax = height[j];
+			else
+				amount += jMax - height[j];
+			--j;
+		}
+	}
+	return amount;
+}
+
+int hammingWeight(uint32_t n) {
+	int num_bits = 0;
+	while (n) {
+		num_bits += n & 1;
+		n = n >> 1;
+	}
+	return num_bits;
+}
