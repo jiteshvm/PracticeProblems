@@ -1,5 +1,7 @@
 #include "miscproblems.h"
 #include <unordered_map>
+#include <bitset>
+#include <iostream>
 
 vector<int> TwoSum(vector<int>& nums, int target) {
 
@@ -61,33 +63,66 @@ int hammingWeight(uint32_t n) {
 	//char buffer[256];
 	while (n) {
 		num_bits += n & 1;
-		//_itoa_s(n, buffer, 2);
-		//printf("n: %s\n", buffer);
+		bitset<16> b(n);
+		//cout << b << endl;
 		n = n >> 1;
 	}
 	return num_bits;
 }
 
+// naive method to find parity
 short parity_naive(unsigned long n)
 {
 	short res = 0;
-	//char buffer[256];
 	while (n) {
 		res = !res;
-		//_itoa_s(res, buffer, 2);
-		//printf("res: %s\n", buffer);
+		bitset<1> b(res);
+		//cout << "res = " << b << endl;
 		n = n & (n - 1);
 	}
 	return res;
 }
 
+// find parity using lookup
 short parity_lookup(unsigned long n)
 {
 	//n ^= n >> 32;
+	bitset<16> t;
+	t = bitset<16>(n);
+	cout << endl << "n =          " << t;
 	n ^= n >> 16;
+	t = bitset<16>(n);
+	cout << endl << "n ^= n >> 16 " << t;
 	n ^= n >> 8;
+	t = bitset<16>(n);
+	cout << endl << "n ^= n >> 8  " << t;
 	n ^= n >> 4;
+	t = bitset<16>(n);
+	cout << endl << "n ^= n >> 4  " << t;
 	n ^= n >> 2;
+	t = bitset<16>(n);
+	cout << endl << "n ^= n >> 2  " << t;
 	n ^= n >> 1;
+	t = bitset<16>(n);
+	cout << endl << "n ^= n >> 1  " << t;
+	t = bitset<16>(n & 0x1);
+	cout << endl << "n & 0x1      " << t;
 	return n & 0x1;
+}
+
+uint32_t reverseBits(uint32_t n)
+{
+	bitset<32> t;
+	t = bitset<32>(n);
+	cout << endl << "before reverse : " << t;
+
+	uint32_t r;
+	r = (BitReverseTable256[n & 0xff] << 24) |
+		(BitReverseTable256[(n >> 8) & 0xff] << 16) |
+		(BitReverseTable256[(n >> 16) & 0xff] << 8) |
+		(BitReverseTable256[(n >> 24) & 0xff]);
+
+	t = bitset<32>(r);
+	cout << endl << "after reverse  : " << t;
+	return r;
 }

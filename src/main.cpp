@@ -45,12 +45,15 @@ int main(int argc, const char* argv[]) {
 	//int w = hammingWeight(n);
 	//printf("number of 1 bits in %d = %d", n, w);
 
-	int n1 = 32767;
-	int n2 = 32763;
-	int p1 = parity_naive(n1);
-	int p2 = parity_lookup(n2);
-	printf("parity of %d = %d", n1, p1);
-	printf("\nparity of %d = %d", n2, p2);
+	//int n1 = 65533;
+	//int n2 = 15;
+	//int p1 = parity_naive(n1);
+	//int p2 = parity_lookup(n2);
+	//printf("parity of %d = %d", n1, p1);
+	//printf("\nparity of %d = %d", n2, p2);
+
+	int r1 = 5732;
+	reverseBits(r1);
 	getchar();
 	return 0;
 }
