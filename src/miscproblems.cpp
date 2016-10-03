@@ -55,11 +55,39 @@ int trap(vector<int>& height) {
 	return amount;
 }
 
+// count the number of bits that are set to 1
 int hammingWeight(uint32_t n) {
 	int num_bits = 0;
+	//char buffer[256];
 	while (n) {
 		num_bits += n & 1;
+		//_itoa_s(n, buffer, 2);
+		//printf("n: %s\n", buffer);
 		n = n >> 1;
 	}
 	return num_bits;
+}
+
+short parity_naive(unsigned long n)
+{
+	short res = 0;
+	//char buffer[256];
+	while (n) {
+		res = !res;
+		//_itoa_s(res, buffer, 2);
+		//printf("res: %s\n", buffer);
+		n = n & (n - 1);
+	}
+	return res;
+}
+
+short parity_lookup(unsigned long n)
+{
+	//n ^= n >> 32;
+	n ^= n >> 16;
+	n ^= n >> 8;
+	n ^= n >> 4;
+	n ^= n >> 2;
+	n ^= n >> 1;
+	return n & 0x1;
 }

@@ -13,3 +13,6 @@ void ReverseWords(char *s);
 int trap(vector<int>& height);
 
 int hammingWeight(uint32_t n);
+
+short parity_naive(unsigned long n);
+short parity_lookup(unsigned long n);

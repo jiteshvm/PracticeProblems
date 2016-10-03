@@ -14,10 +14,10 @@ int main(int argc, const char* argv[]) {
 	//}
 
 	//reverse words in a string
-	char str[] = "one two three\0";
-	printf("%s", str);
-	ReverseWords(str);
-	printf("\n%s", str);
+	//char str[] = "one two three\0";
+	//printf("%s", str);
+	//ReverseWords(str);
+	//printf("\n%s", str);
 	//reverseWords(str);
 
 	//linked list operations
@@ -41,8 +41,16 @@ int main(int argc, const char* argv[]) {
 	//printf("\rain water trapped = %d", amt);
 
 	//hamming weight
-	int w = hammingWeight(3);
-	printf("number of bits = %d", w);
+	//int n = 9999;
+	//int w = hammingWeight(n);
+	//printf("number of 1 bits in %d = %d", n, w);
+
+	int n1 = 32767;
+	int n2 = 32763;
+	int p1 = parity_naive(n1);
+	int p2 = parity_lookup(n2);
+	printf("parity of %d = %d", n1, p1);
+	printf("\nparity of %d = %d", n2, p2);
 	getchar();
 	return 0;
 }
